@@ -30,7 +30,7 @@ public class AuthService : IAuthService
 
     public async Task<AuthResponse> LoginAsync(string email, string password, CancellationToken ct)
     {
-        if (email == "admin" && password == "admin") // For admin, shit code
+        if (email == "admin@gmail.com" && password == "admin") // For admin, shit code
         {
             var adminUser = new UserEntity
             {
