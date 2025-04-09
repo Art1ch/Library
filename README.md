@@ -9,8 +9,12 @@ cd src/Services
 docker-compose up -d --build
 ```
 
+# How to test API with swagger?
+Insert this into your browser address bar
+```https://localhost:8081/swagger/index.html```
+
 # How to authenticate as a Admin?
-Send to the route ```https://localhost:51497/Auth/login```
+Send POST-method to this route ```https://localhost:8081/Auth/login```
 this body:
 ```
 {
