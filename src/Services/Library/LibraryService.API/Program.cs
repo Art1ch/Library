@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Negotiate;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using LibraryService.API.Middlewares;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace LibraryService.API
 {
@@ -41,8 +42,8 @@ namespace LibraryService.API
                 app.UseSwaggerUI();
             }
 
-            //app.UseMiddleware<GlobalExceptionMiddleware>();
-            app.UseHttpsRedirection();
+            app.UseMiddleware<GlobalExceptionMiddleware>();
+            //app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
